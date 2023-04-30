@@ -1,13 +1,68 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0oqi1im71g0d"]
+[gd_scene load_steps=3 format=3 uid="uid://c0oqi1im71g0d"]
 
 [ext_resource type="Script" path="res://LoginPage/login_page.gd" id="1_3xai8"]
+[ext_resource type="Texture2D" uid="uid://rioqssp16giq" path="res://icon.svg" id="2_o4gnd"]
 
-[node name="LoginPage" type="Node2D"]
+[node name="LoginPage" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1200.0
+offset_bottom = 650.0
 script = ExtResource("1_3xai8")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 554.0
-offset_top = 309.0
-offset_right = 594.0
-offset_bottom = 335.0
-text = "Hello"
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1200.0
+offset_bottom = 300.0
+texture = ExtResource("2_o4gnd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 325.0
+offset_right = 750.0
+offset_bottom = 625.0
+theme_override_constants/separation = 15
+
+[node name="UsernameLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "User Name"
+
+[node name="UsernameTextEdit" type="TextEdit" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Username"
+
+[node name="PasswordLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Password"
+
+[node name="PasswordTextEdit" type="TextEdit" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Password"
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="LoginButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Login"
+
+[node name="RegisterButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Register"
+
+[node name="HSeparator5" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Copyright" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Copyright information goes here
+"
+horizontal_alignment = 1

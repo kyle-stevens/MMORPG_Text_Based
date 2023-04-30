@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0oqi1im71g0d"]
+
+[ext_resource type="Script" path="res://LoginPage/login_page.gd" id="1_3xai8"]
+
+[node name="LoginPage" type="Node2D"]
+script = ExtResource("1_3xai8")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 554.0
+offset_top = 309.0
+offset_right = 594.0
+offset_bottom = 335.0
+text = "Hello"
